@@ -1,0 +1,740 @@
+@import url("reset.css");
+@import url("fonts.css");
+
+body {
+	background: #380304;
+	margin: 0;
+	padding: 0;
+}
+
+.pull.left { float: left; }
+.pull.right { float: right; }
+
+/* body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.30);
+	border-radius: 10px;
+	background: yellow;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+	background: blue;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background: #84060A;
+} */
+
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
+div { position: relative; }
+
+.creditos {
+	background: rgba(0,0,0,0.80);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	color: rgba(0,0,0,0.90);
+	font-family: 'Segoe UI';
+	font-size: 13px;
+}
+
+.creditos > .desenvolvedor > .fechar {
+	position: absolute;
+	top: -30px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	right: -3px;
+	cursor: pointer;
+}
+
+.creditos > .desenvolvedor {
+	background: rgba(255,255,255,0.90);
+	width: 250px;
+	height: auto;
+	padding: 12px 12px;
+	box-shadow: red 0px 0px 0px 3px;
+	border-radius: 5px;
+	left: calc(50% - 100px);
+	top: 30%;
+	text-align: center;
+}
+
+/* HEADER */
+header {
+	background: url("../img/bg-topo.jpg") 0px -70px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 253px;
+	position: relative;
+	border-bottom: #FFF solid 2px;
+	margin-top: -18px;
+}
+
+header > .escuro {
+	background: rgba(0,0,0,0.75);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9;
+}
+
+
+/* LOGO */
+#logo {
+	background: url('../img/logo.png');
+	height: 168px;
+	width: 212px;
+	position: absolute;
+	top: calc(50% - 83.5px);
+	left: calc(50% - 106px);
+	z-index: 99;
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+	header {
+		background: url("../img/bg-topo.jpg") 0px -20px;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 253px;
+		display: table;
+		border-bottom: #FFF solid 2px;
+	}
+
+	header > .escuro {
+		background: rgba(0,0,0,0.75);
+		width: 100%;
+		height: 253px;
+		position: absolute;
+		z-index: 9;
+	}
+
+	menu.estilo {
+		visibility: hidden;
+	}
+
+	header > .escuro { height: 100%; }
+	header > .menu-base {
+		position: fixed;
+		top: 7px;
+		left: 7px;
+		z-index: 999;
+	}
+
+	header > .menu-base > .base {
+		background: rgba(255,255,255,0.70);
+		width: 45px;
+		height: 45px;
+		border-radius: 100%;
+		margin-top: 5px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	header > .menu-base > .base:first-of-type() { margin-top: 0px; }
+	header > .menu-base > .base > a > .icon {
+		height: 35px;
+		width: 35px;
+	}
+
+	header > .menu-base > .base > a > .icon.home {
+		background: url('../img/icon-home.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	header > .menu-base > .base > a > .icon.cardapio {
+		background: url('../img/icon-cardapio.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	header > .menu-base > .base > a > .icon.contato {
+		background: url('../img/icon-contato.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+
+	aside.conteudo.inicio {
+		background: url('../img/fome2.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 620px;
+		position: relative;
+	}
+
+	aside.conteudo.inicio > .texto {
+		width: 310px;
+		position: absolute;
+		left: calc(50% - 155px);
+		top: calc(50% - 109.5px);
+		text-align: center;
+	}
+
+	aside.conteudo.inicio > .texto > .txt {
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 32px;
+		color: #FFF;
+	}
+
+	aside.conteudo.inicio > .texto > .botao-cardapio {
+		background: #ED272D;
+		width: 310px;
+		height: 58px;
+		margin: 18px 0px;
+		border-radius: 10px;
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 21px;
+		color: #FFF;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* CONTATO */
+	aside.conteudo.contato {
+		background: url('../img/contato.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 650px;
+		box-shadow: rgba(0,0,0,0.70) 0px 3px 0px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	aside.conteudo.contato > .content {
+		width: 90%;
+	}
+	aside.conteudo.contato > .content > .texto { color: #FFF; font-family: "Segoe UI Light"; }
+	aside.conteudo.contato > .content > .texto > h1 { font-family: "Segoe UI"; font-weight: bold; font-size: 10pt; }
+	aside.conteudo.contato > .content > .texto > h2 {
+		font-family: "Segoe UI";
+		font-size: 9pt;
+		font-weight: normal;
+	}
+
+	aside.conteudo.contato > .content > form > h1 {
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 10pt;
+		color: #FFF;
+	}
+	aside.conteudo.contato > .content > form > h3 {
+		font-family: "Segoe UI Light";
+		font-size: 12px;
+		width: 100%;
+		color: #FFF;
+		font-style: italic;
+		font-weight: normal;
+	}
+
+	input[type="text"], select {
+		background: rgba(255,255,255,0.95);
+		height: 40px;
+		width: 100%;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding-left: 7px;
+		padding-right: 7px;
+		color: rgba(0,0,0,0.60);
+		font-family: "Segoe UI";
+		font-size: 15px;
+		box-shadow: rgba(0,0,0,0.90) 0px 0px 0px 1px;
+		display: table;
+		margin: 3px 0px;
+	}
+
+	textarea {
+		background: rgba(255,255,255,0.95);
+		box-shadow: rgba(0,0,0,0.90) 0px 0px 0px 1px;
+		width: 100%;
+		height: 60px;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		resize: none;
+		font-family: "Segoe UI";
+		font-size: 12px;
+		color: rgba(0,0,0,0.90);
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+
+	input[type="submit"], input[type="email"], input[type="tel"] {
+		background: rgba(255,255,255,0.95);
+		height: 40px;
+		width: 100%;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding-left: 7px;
+		padding-right: 7px;
+		color: rgba(0,0,0,0.90);
+		font-family: "Segoe UI";
+		font-size: 15px;
+		box-shadow: rgba(0,0,0,0.90) 0px 0px 0px 1px;
+		display: table;
+		margin: 3px 0px;
+		transition: all 0.2s ease-in;
+	}
+
+	input[type="submit"]:hover {
+		background: rgba(0,0,0,0.30);
+		color: white;
+	}
+
+	/* CARDAPIO */
+	aside.conteudo.pagina-cardapio {
+		background: url('../img/bg-lanches.jpg');
+		-webkit-background-size: cover;
+		background-size: cover;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.cardapio { float: left; margin-left: 5px; }
+	.cardapio:first-of-type { margin-left: 0; }
+	.cardapio > h1 {
+		font-family: "Segoe UI Light";
+		font-size: 15pt;
+		text-align: center;
+		color: #FFF;
+		margin: 7px;
+	}
+
+	.cardapio > img { width: 100%; }
+
+	.cardapio-base {
+		background: rgba(0,0,0,0.49);
+		box-sizing: border-box;
+		padding:  7px 7px;
+		width: 100%;
+	}
+
+	.cardapio-base > .side { width: 100%; }
+	.cardapio-base > .side > .lanche > .categoria-logo { margin: 10px auto; }
+	.cardapio-base > .side > .lanche > .categoria-logo.tradicionais {
+		background: url('../img/cardapio/lanches-tradicionais.png');
+		width: 346px;
+		height: 94px;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.artesanais {
+		background: url('../img/cardapio/lanches-artesanais.png');
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 340px;
+		height: 100px;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.porcoes {
+		background: url('../img/cardapio/porcoes-mobile.png');
+		width: 284px;
+		height: 69px;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.bebidas {
+		background: url('../img/cardapio/bebidas-mobile.png');
+		width: 316px;
+		height: 106px;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .produto {
+		color: orange;
+		font-family: 'Calibri';
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .produto > .nome-produto, .numeracao { float: left; }
+
+	.cardapio-base > .side > .lanche > ol > li > .preco {
+		padding: 7px 7px;
+		box-sizing: border-box;
+		background: white;
+		border-radius: 4px;
+		font-family: 'Calibri';
+		color: darkred;
+		font-weight: bold;
+		float: right;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .descricao {
+		color: white;
+		clear: both;
+		top: -10px;
+		font-family: 'Calibri';
+		font-size: 12px;
+		max-width: 78%;
+	}
+
+	/* LOCAL */
+	aside.conteudo.local {
+		background: url('../img/fome.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 650px;
+		box-shadow: rgba(0,0,0,0.70) 0px 3px 0px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 99;
+	}
+
+	aside.conteudo.local > .container-address > .address {
+		font-size: 13px;
+		font-family: 'Segoe UI Light';
+		text-align: center;
+		color: #FFF;
+		padding: 5px 5px;
+	}
+
+	aside.conteudo.local > .container-address > .maps { margin-top: 5px; }
+
+}
+
+/* DESKTOP */
+@media (min-width: 750px) {
+	/* MENU */
+	menu.estilo {
+		position: absolute;
+		z-index: 999;
+		bottom: -5px;
+		left: 50%;
+		right: 50%;
+	}
+
+	menu.estilo > ul.menu {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+	}
+
+	menu.estilo > ul.menu > li.item {
+		float: left;
+		margin-left: 66px;
+		color: #FFF;
+		font-size: 20px;
+		font-family: 'Segoe UI';
+		font-weight: bold;
+		text-shadow: rgba(0,0,0,0.10) 0px 1px 0px;
+	}
+
+	menu.estilo > ul.menu > li.item.ativo { box-shadow: #FFFFFF 0px -2px 0px; }
+	menu.estilo > ul.menu > li.item:first-of-type { margin-left: 0; }
+
+	/* ASIDE CONTEUDO INICIO */
+	aside.conteudo.inicio {
+		background: url('../img/fome2.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 620px;
+		position: relative;
+	}
+
+	aside.conteudo.inicio > .texto {
+		width: 310px;
+		position: absolute;
+		left: 60px;
+		top: calc(50% - 109.5px);
+		text-align: center;
+	}
+
+	aside.conteudo.inicio > .texto > .txt {
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 32px;
+		color: #FFF;
+	}
+
+	aside.conteudo.inicio > .texto > .botao-cardapio {
+		background: #ED272D;
+		width: 310px;
+		height: 58px;
+		margin: 18px 0px;
+		border-radius: 10px;
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 21px;
+		color: #FFF;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* CARDAPIO */
+	aside.conteudo.pagina-cardapio {
+		background: url('../img/cardapio');
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.cardapio { float: left; margin-left: 5px; }
+	.cardapio:first-of-type { margin-left: 0; }
+	.cardapio > h1 {
+		font-family: "Segoe UI Light";
+		font-size: 30px;
+		text-align: center;
+		color: #FFF;
+		margin: 7px;
+	}
+
+	/* LOCAL */
+	aside.conteudo.local {
+		background: url('../img/fome.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 650px;
+		box-shadow: rgba(0,0,0,0.70) 0px 3px 0px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 99;
+	}
+
+	aside.conteudo.local > .container-address > .address {
+		font-size: 13px;
+		font-family: 'Segoe UI Light';
+		text-align: center;
+		color: #FFF;
+	}
+
+	aside.conteudo.local > .container-address >.maps { margin-top: 5px; }
+
+	/* CONTATO */
+	aside.conteudo.contato {
+		background: url('../img/contato.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 650px;
+		box-shadow: rgba(0,0,0,0.70) 0px 3px 0px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	aside.conteudo.contato > .content > .texto { color: #FFF; font-family: "Segoe UI Light"; }
+	aside.conteudo.contato > .content > .texto > h1 { font-family: "Segoe UI"; font-weight: bold; font-size: 30px; }
+	aside.conteudo.contato > .content > .texto > h2 {
+		font-family: "Segoe UI";
+		font-size: 17px;
+		font-weight: normal;
+	}
+
+	aside.conteudo.contato > .content > form > h1 {
+		font-family: "Segoe UI";
+		font-weight: bold;
+		font-size: 30px;
+		color: #FFF;
+	}
+	aside.conteudo.contato > .content > form > h3 {
+		font-family: "Segoe UI Light";
+		font-size: 12px; width: 400px;
+		color: #FFF;
+		font-style: italic;
+		font-weight: normal;
+	}
+
+	input[type="text"], select {
+		background: rgba(255,255,255,0.95);
+		height: 40px;
+		width: 400px;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding-left: 7px;
+		padding-right: 7px;
+		color: rgba(0,0,0,0.60);
+		font-family: "Segoe UI";
+		font-size: 15px;
+		box-shadow: rgba(0,0,0,1) 0px 0px 0px 1px;
+		display: table;
+		margin: 3px 0px;
+	}
+
+	textarea {
+		background: rgba(255,255,255,0.95);
+		box-shadow: rgba(0,0,0,0.90) 0px 0px 0px 1px;
+		width: 400px;
+		height: 60px;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		resize: none;
+		font-family: "Segoe UI";
+		font-size: 12px;
+		color: rgba(0,0,0,0.90);
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+
+	input[type="submit"], input[type="email"], input[type="tel"] {
+		background: rgba(255,255,255,0.95);
+		height: 40px;
+		width: 400px;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding-left: 7px;
+		padding-right: 7px;
+		color: rgba(0,0,0,0.90);
+		font-family: "Segoe UI";
+		font-size: 15px;
+		box-shadow: rgba(0,0,0,0.90) 0px 0px 0px 1px;
+		display: table;
+		margin: 3px 0px;
+		transition: all 0.2s ease-in;
+	}
+
+	input[type="submit"]:hover {
+		background: rgba(0,0,0,0.30);
+		color: white;
+	}
+
+	/* CARDAPIO */
+	.cardapio-base {
+		background: rgba(0,0,0,0.49);
+		width: 950px;
+		margin: 5px auto;
+		border-radius: 5px;
+		box-sizing: border-box;
+		padding:  7px 7px;
+	}
+
+	.cardapio-base > .side { width: 457px; }
+
+	.cardapio-base > .side > .lanche > .categoria-logo { margin: 10px auto; }
+	.cardapio-base > .side > .lanche > .categoria-logo.tradicionais {
+		background: url('../img/cardapio/lanches-tradicionais.png');
+		width: 346px;
+		height: 94px;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.artesanais {
+		background: url('../img/cardapio/lanches-artesanais.png');
+		width: 342px;
+		height: 102px;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.porcoes {
+		background: url('../img/cardapio/porcoes.png');
+		width: 372px;
+		height: 90px;
+	}
+
+	.cardapio-base > .side > .lanche > .categoria-logo.bebidas {
+		background: url('../img/cardapio/bebidas.png');
+		width: 380px;
+		height: 126px;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .produto {
+		color: orange;
+		font-family: 'Calibri';
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .produto > .nome-produto, .numeracao { float: left; }
+	.cardapio-base > .side > .lanche > ol > li > .preco {
+		padding: 7px 7px;
+		box-sizing: border-box;
+		background: white;
+		border-radius: 4px;
+		font-family: 'Calibri';
+		color: darkred;
+		font-weight: bold;
+		float: right;
+	}
+
+	.cardapio-base > .side > .lanche > ol > li > .descricao {
+		color: white;
+		clear: both;
+		top: -10px;
+		font-family: 'Calibri';
+		font-size: 12px;
+		max-width: 400px;
+	}
+
+	.cardapio-base > .side.lador { float: right; }
+	.cardapio-base > .side.ladol { float: left; }
+}
+
+
+footer {
+	background: rgba(0,0,0,0.70);
+	width: 100%;
+	box-shadow: 0px -2px 0px 0px #FFFFFF;
+	z-index: 9999;
+	position: relative;
+}
+
+footer > .text {
+	color: #FFF;
+	font-family: "Segoe UI Light";
+	text-align: center;
+	padding: 5px 0px;
+}

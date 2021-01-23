@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Segoe UI";
+	src: url('../fonts/segoeui.otf'); /* IE9 Compat Modes */
+	src: url('../fonts/segoeui.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    	url('../fonts/segoeui.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/segoeui.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/segoeui.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/segoeui.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: "Segoe UI Bold";
+	src: url('../fonts/segoeuib.ttf') format ('truetype');
+}
+
+@font-face {
+	font-family: "Segoe UI Light";
+	src: url('../fonts/segoeuil.otf'); /* IE9 Compat Modes */
+	src: url('../fonts/segoeuil.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    	url('../fonts/segoeuil.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/segoeuil.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/segoeuil.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/segoeuil.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
